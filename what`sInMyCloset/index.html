@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What`s in Your Closet</title>
+    <script src="./main.js" defer></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <h1 class="title">오늘 뭐 입지?</h1>
+    <div class="section_wrap">
+      <section class="btn_section_wrap">
+        <div class="btn_wrap">
+          <img class="btn_img btn_all" src="./img/closet.png" />
+          <img
+            class="btn_img"
+            src="./img/tops.png"
+            data-key="type"
+            data-value="tops"
+          />
+          <img
+            class="btn_img"
+            src="./img/bottoms.png"
+            data-key="type"
+            data-value="bottoms"
+          />
+          <img
+            class="btn_img"
+            src="./img/shoes.png"
+            data-key="type"
+            data-value="shoes"
+          />
+          <button
+            class="btn_color btn_black"
+            data-key="color"
+            data-value="black"
+          >
+            BLACK
+          </button>
+          <button
+            class="btn_color btn_white"
+            data-key="color"
+            data-value="white"
+          >
+            WHITE
+          </button>
+          <button class="btn_color btn_etc" data-key="color" data-value="etc">
+            ETC
+          </button>
+          <button class="btn_color btn_reset">RESET</button>
+        </div>
+        <div class="img_tops"></div>
+        <div class="img_bottoms"></div>
+        <div class="img_shoes"></div>
+      </section>
+      <section class="avartar_wrap">
+        <img class="img_face" src="./img/face.png" alt="" />
+        <div id="avartar_tops"></div>
+        <div id="avartar_bottoms"></div>
+        <div id="avartar_shoes"></div>
+      </section>
+    </div>
+  </body>
+</html>

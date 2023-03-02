@@ -1,0 +1,64 @@
+{
+  "items": [
+    {
+      "type": "tops",
+      "color": "black",
+      "image": "img/black_tops.png"
+    },
+    {
+      "type": "tops",
+      "color": "white",
+      "image": "img/white_tops.png"
+    },
+    {
+      "type": "tops",
+      "color": "etc",
+      "image": "img/etc_tops.png"
+    },
+    {
+      "type": "tops",
+      "color": "etc",
+      "image": "img/etc_halftops.png"
+    },
+    {
+      "type": "bottoms",
+      "color": "black",
+      "image": "img/black_bottoms.png"
+    },
+    {
+      "type": "bottoms",
+      "color": "white",
+      "image": "img/white_bottoms.png"
+    },
+    {
+      "type": "bottoms",
+      "color": "etc",
+      "image": "img/etc_bottoms.png"
+    },
+    {
+      "type": "bottoms",
+      "color": "etc",
+      "image": "img/etc_bottoms2.png"
+    },
+    {
+      "type": "shoes",
+      "color": "black",
+      "image": "img/black_shoes.png"
+    },
+    {
+      "type": "shoes",
+      "color": "white",
+      "image": "img/white_shoes.png"
+    },
+    {
+      "type": "shoes",
+      "color": "etc",
+      "image": "img/etc_shoes.png"
+    },
+    {
+      "type": "shoes",
+      "color": "etc",
+      "image": "img/etc_shoes2.png"
+    }
+  ]
+}
