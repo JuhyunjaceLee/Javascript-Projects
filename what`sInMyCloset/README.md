@@ -5,7 +5,8 @@
 
 ## 프로젝트 URL - 프로젝트 바로가기<a href="https://chipper-macaron-9219aa.netlify.app/">CLICK</a>
 
-## 프로젝트 MEMO URL - <a href="https://www.notion.so/What-s-In-My-Closet-74cb78cb3c9b4ab897b89217664fc8bd?pvs=4">CLICK</a>
+## 프로젝트 MEMO URL - <a href="https://desert-edam-bea.notion.site/What-s-In-My-Closet-74cb78cb3c9b4ab897b89217664fc8bd">CLICK</a>
+
 
 ## 제작기간
 2023년 02월 28일 - 2023년 03월 02일
