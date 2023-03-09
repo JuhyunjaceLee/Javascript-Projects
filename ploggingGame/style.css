@@ -15,6 +15,41 @@ img {
 body {
   background-color: black;
 }
+.pop_up_explain {
+  width: 400px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  /* position: absolute; */
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  position: relative;
+}
+.pop_up_hide {
+  display: none;
+}
+.explain_rule {
+  color: white;
+  font-size: 24px;
+}
+.explain_btn {
+  background-color: greenyellow;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  /* transition: all 0.3ms ease-in; */
+}
+.explain_btn:hover {
+  transform: scale(1.1);
+}
 .game {
   background: url(./img/backgroundImg.png) center/cover;
   width: 800px;
@@ -51,6 +86,7 @@ body {
   margin: 10px 0;
   padding: 5px 10px;
   visibility: hidden;
+  user-select: none;
 }
 .game_score {
   border: 3px solid black;
@@ -60,6 +96,7 @@ body {
   height: 50px;
   font-size: 28px;
   visibility: hidden;
+  user-select: none;
 }
 .game_field {
   width: 100%;
@@ -98,4 +135,13 @@ body {
 }
 .pop_up_replay_btn:hover {
   transform: rotateY(180deg);
+}
+.turtle,
+.trash {
+  cursor: pointer;
+  transition: all 100ms ease-in;
+}
+.turtle:hover,
+.trash:hover {
+  transform: scale(1.1);
 }

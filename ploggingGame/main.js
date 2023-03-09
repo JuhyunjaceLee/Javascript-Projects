@@ -11,12 +11,37 @@ const popUpReplayBtn = document.querySelector(".pop_up_replay_btn");
 const TURTLE_WIDTH = 80;
 const TURTLE_HEIGHT = 55;
 const TURTLE_COUNT = 10;
-const TRASH_COUNT = 5;
+const TRASH_COUNT = 10;
 const GAME_TIMER = 10;
 
 let started = false;
 let score = 0;
 let timer;
+
+const win = true;
+const lose = false;
+
+explainGame();
+
+field.addEventListener("click", (event) => onFieldClick(event));
+
+function onFieldClick(event) {
+  if (!started) {
+    return;
+  }
+  const target = event.target;
+  if (target.matches(".trash")) {
+    target.remove();
+    score++;
+    updateScroe();
+    if (score === TRASH_COUNT) {
+      finishGame(win);
+    }
+  } else if (target.matches(".turtle")) {
+    stopGameTimer();
+    finishGame(lose);
+  }
+}
 
 gamePlayBtn.addEventListener("click", () => {
   if (started == true) {
@@ -24,11 +49,10 @@ gamePlayBtn.addEventListener("click", () => {
   } else {
     startGame();
   }
-  started = !started;
-  console.log(started);
 });
 
 function startGame() {
+  started = true;
   initGame();
   showStopBtn();
   showTimerAndScore();
@@ -36,13 +60,28 @@ function startGame() {
 }
 
 function stopGame() {
+  started = false;
   stopGameTimer();
-  hidePlayButton();
+  playButton("hidden");
   showPopUpWithText("REPLAY");
 }
 
-function hidePlayButton() {
-  gamePlayBtn.style.visibility = "hidden";
+function finishGame(win) {
+  stopGame();
+  showPopUpWithText(win ? "YOU SAVE TURTLES🐢" : "ONE MORE TRY?👻");
+}
+
+popUpReplayBtn.addEventListener("click", () => {
+  startGame();
+  removePopUp();
+});
+
+function updateScroe() {
+  gameScore.innerText = TRASH_COUNT - score;
+}
+
+function playButton(txt) {
+  gamePlayBtn.style.visibility = `${txt}`;
 }
 
 function showPopUpWithText(text) {
@@ -50,10 +89,15 @@ function showPopUpWithText(text) {
   popUpMsg.innerText = text;
 }
 
+function removePopUp() {
+  popUp.classList.add("pop_up_hidden");
+}
+
 function showStopBtn() {
   const icon = document.querySelector(".play_icon");
   icon.classList.add("fa-stop");
   icon.classList.remove("fa-play");
+  gamePlayBtn.style.visibility = "visible";
 }
 
 function showTimerAndScore() {
@@ -67,6 +111,7 @@ function startGameTimer() {
   timer = setInterval(() => {
     if (timerSec <= 0) {
       stopGameTimer();
+      finishGame(lose);
       return;
     }
     updateGameTimer(--timerSec);
@@ -85,6 +130,7 @@ function updateGameTimer(time) {
 }
 
 function initGame() {
+  score = 0;
   field.innerHTML = "";
   gameScore.innerText = TRASH_COUNT;
   additem("trash", TRASH_COUNT, "./img/trash.png");
@@ -112,4 +158,14 @@ function additem(className, count, imgPath) {
 
 function randomNumber(min, max) {
   return Math.random() * (max - min) + min;
+}
+
+function explainGame() {
+  const ruleBtn = document.querySelector(".explain_btn");
+  playButton("hidden");
+  ruleBtn.addEventListener("click", () => {
+    const rule = document.querySelector(".pop_up_explain");
+    rule.classList.add("pop_up_hide");
+    playButton("visible");
+  });
 }
