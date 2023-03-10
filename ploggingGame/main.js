@@ -71,18 +71,17 @@ function finishGame(win) {
   showPopUpWithText(win ? "YOU SAVE TURTLES🐢" : "ONE MORE TRY?👻");
 }
 
-popUpReplayBtn.addEventListener("click", () => {
-  startGame();
-  removePopUp();
-});
+function playButton(txt) {
+  gamePlayBtn.style.visibility = `${txt}`;
+}
 
 function updateScroe() {
   gameScore.innerText = TRASH_COUNT - score;
 }
-
-function playButton(txt) {
-  gamePlayBtn.style.visibility = `${txt}`;
-}
+popUpReplayBtn.addEventListener("click", () => {
+  startGame();
+  removePopUp();
+});
 
 function showPopUpWithText(text) {
   popUp.classList.remove("pop_up_hidden");
