@@ -1,0 +1,40 @@
+:root {
+  --font-white: rgb(255, 255, 255);
+  --font-gray: rgb(124, 132, 136);
+  --font-orange: rgb(255, 105, 0);
+  --background-black: rgb(0, 0, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--background-black);
+  color: var(--font-white);
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 30px;
+}
+
+.title_wrap {
+  display: flex;
+  align-items: center;
+}
+
+.face {
+  width: 50px;
+  height: 50px;
+}
+
+.title_name {
+  color: var(--font-orange);
+}
+
+.menu_wrap span {
+  margin-right: 15px;
+}
