@@ -1,8 +1,10 @@
 :root {
-  --font-white: rgb(255, 255, 255);
-  --font-gray: rgb(124, 132, 136);
-  --font-orange: rgb(255, 105, 0);
-  --background-black: rgb(0, 0, 0);
+  /* color */
+  --color-white: rgb(255, 255, 255);
+  --color-gray: rgb(124, 132, 136);
+  --color-darkgray: rgb(51, 54, 57);
+  --color-orange: rgb(255, 105, 0);
+  --color-black: rgb(0, 0, 0);
 }
 * {
   margin: 0;
@@ -10,31 +12,73 @@
   box-sizing: border-box;
 }
 body {
-  background-color: var(--background-black);
-  color: var(--font-white);
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 15px 60px;
 }
-
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px 30px;
+  /* padding: 10px 30px; */
 }
-
 .title_wrap {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
-
 .face {
   width: 50px;
   height: 50px;
+  margin-right: 5px;
 }
-
+.face:hover {
+  transform: rotate(-45deg);
+}
 .title_name {
-  color: var(--font-orange);
+  color: var(--color-orange);
+  font-size: 2.5rem;
 }
-
 .menu_wrap span {
   margin-right: 15px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-gray);
+  cursor: pointer;
+}
+.menu_wrap span:hover {
+  color: var(--color-orange);
+}
+.job_title {
+  font-size: 6rem;
+  text-align: center;
+  color: var(--color-gray);
+}
+.main_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1.5rem;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 600;
+}
+.box_wrap {
+  display: flex;
+}
+.box_wrap div {
+  width: 200px;
+  height: 200px;
+  margin: 5px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--color-darkgray);
+  cursor: pointer;
+}
+.first_bigBox,
+.first_miniBox,
+.second_miniBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
 }
