@@ -10,7 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap"
       rel="stylesheet"
     />
-    <script src="./main.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/router.js"></script>
+
     <script
       src="https://kit.fontawesome.com/3b9b6fd912.js"
       crossorigin="anonymous"
@@ -18,21 +20,31 @@
   </head>
   <body>
     <nav class="nav">
-      <div class="title_wrap">
-        <img class="face" src="./img/face.png" alt="" />
-        <h2 class="title_name">JUHYUN LEE</h2>
-      </div>
+      <a href="/" onclick="route()">
+        <div class="title_wrap">
+          <img class="face" src="./img/face_logo.png" alt="" />
+          <h2 class="title_name">JUHYUN LEE</h2>
+        </div>
+      </a>
       <div class="menu_wrap">
-        <span>About</span>
-        <span>Projects</span>
-        <span>Resume</span>
-        <span>Contact</span>
+        <a href="/about" onclick="route()">
+          <span>About</span>
+        </a>
+        <a href="/project" onclick="route()">
+          <span>Projects</span>
+        </a>
+        <a href="/skill" onclick="route()">
+          <span>Skills</span>
+        </a>
+        <a href="/contact" onclick="route()">
+          <span>Contact</span>
+        </a>
       </div>
     </nav>
     <h1 class="job_title">FRONT-END DEVELOPER</h1>
     <main class="main_wrap">
       <section class="box_wrap">
-        <div class="first_bigBox" style="width: 400px">
+        <a href="/about" class="intro_box" onclick="route()">
           <section class="intro_box">
             <p>안녕하세요!</p>
             <p>이주현입니다.😊</p>
@@ -42,24 +54,30 @@
             class="fa-solid fa-circle-arrow-right"
             style="color: var(--color-gray)"
           ></i>
-        </div>
-        <div class="first_miniBox">
+        </a>
+        <a href="/project" class="projects_box" onclick="route()">
           <p>PROJECTS</p>
           <i
             class="fa-solid fa-circle-arrow-right"
             style="color: var(--color-gray)"
           ></i>
-        </div>
+        </a>
       </section>
       <section class="box_wrap">
-        <div class="second_miniBox">
-          <p>RESUME</p>
+        <a href="/skill" class="skills_box" onclick="route()">
+          <p>SKILLS</p>
           <i
             class="fa-solid fa-circle-arrow-right"
             style="color: var(--color-gray)"
           ></i>
-        </div>
-        <div style="width: 400px"></div>
+        </a>
+        <a href="/contact" class="contact_box" onclick="route()">
+          <p>CONTACT ME</p>
+          <i
+            class="fa-solid fa-circle-arrow-right"
+            style="color: var(--color-gray); font-size: 1.5rem"
+          ></i>
+        </a>
       </section>
     </main>
   </body>

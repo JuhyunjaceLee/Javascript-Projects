@@ -16,11 +16,14 @@ body {
   color: var(--color-white);
   padding: 15px 60px;
 }
+a {
+  text-decoration: none;
+  color: inherit;
+}
 .nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  /* padding: 10px 30px; */
 }
 .title_wrap {
   display: flex;
@@ -28,8 +31,8 @@ body {
   cursor: pointer;
 }
 .face {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
   margin-right: 5px;
 }
 .face:hover {
@@ -41,7 +44,7 @@ body {
 }
 .menu_wrap span {
   margin-right: 15px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 600;
   color: var(--color-gray);
   cursor: pointer;
@@ -53,6 +56,7 @@ body {
   font-size: 6rem;
   text-align: center;
   color: var(--color-gray);
+  margin: 20px 0;
 }
 .main_wrap {
   display: flex;
@@ -64,21 +68,32 @@ body {
 }
 .box_wrap {
   display: flex;
+  width: 100%;
 }
-.box_wrap div {
-  width: 200px;
-  height: 200px;
+.box_wrap a {
+  width: 100%;
+  height: 300px;
   margin: 5px;
   padding: 30px;
   border-radius: 10px;
   background-color: var(--color-darkgray);
   cursor: pointer;
-}
-.first_bigBox,
-.first_miniBox,
-.second_miniBox {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 10px;
+}
+.contact_box {
+  font-size: 2.5rem;
+}
+.intro_box,
+.contact_box {
+  flex: 2;
+}
+.projects_box,
+.skills_box {
+  flex: 1;
+}
+.skills_icon_wrap {
+  grid-template-columns: repeat(5, 1fr);
 }
