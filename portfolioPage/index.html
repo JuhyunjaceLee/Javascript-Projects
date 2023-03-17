@@ -10,9 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap"
       rel="stylesheet"
     />
-    <script src="js/main.js" defer></script>
-    <script src="js/router.js"></script>
-
+    <script src="./main.js" defer></script>
     <script
       src="https://kit.fontawesome.com/3b9b6fd912.js"
       crossorigin="anonymous"
@@ -20,65 +18,55 @@
   </head>
   <body>
     <nav class="nav">
-      <a href="/" onclick="route()">
-        <div class="title_wrap">
-          <img class="face" src="./img/face_logo.png" alt="" />
-          <h2 class="title_name">JUHYUN LEE</h2>
-        </div>
-      </a>
-      <div class="menu_wrap">
-        <a href="/about" onclick="route()">
-          <span>About</span>
-        </a>
-        <a href="/project" onclick="route()">
-          <span>Projects</span>
-        </a>
-        <a href="/skill" onclick="route()">
-          <span>Skills</span>
-        </a>
-        <a href="/contact" onclick="route()">
-          <span>Contact</span>
-        </a>
+      <div class="title_wrap" onclick="removeSectionActive()">
+        <img class="face" src="./img/face_logo.png" alt="face_logo" />
+        <h2 class="title_name">JUHYUN LEE</h2>
       </div>
+      <ul class="menu_wrap">
+        <li data-name="about">About</li>
+        <li data-name="project">Projects</li>
+        <li data-name="skill">Skills</li>
+        <li data-name="contact">Contact</li>
+      </ul>
     </nav>
     <h1 class="job_title">FRONT-END DEVELOPER</h1>
-    <main class="main_wrap">
-      <section class="box_wrap">
-        <a href="/about" class="intro_box" onclick="route()">
-          <section class="intro_box">
-            <p>안녕하세요!</p>
-            <p>이주현입니다.😊</p>
-            <p style="font-size: 0.8rem">"Front-End Developer"</p>
+    <div class="main_wrap">
+      <div class="main_wrapper">
+        <main class="main">
+          <section id="about" class="about_box">
+            <div class="about_content">
+              <p>안녕하세요!</p>
+              <p>이주현입니다.😊</p>
+              <p style="font-size: 0.8rem">"Front-End Developer"</p>
+            </div>
+            <i
+              class="fa-solid fa-circle-arrow-right"
+              style="color: var(--color-gray)"
+            ></i>
           </section>
-          <i
-            class="fa-solid fa-circle-arrow-right"
-            style="color: var(--color-gray)"
-          ></i>
-        </a>
-        <a href="/project" class="projects_box" onclick="route()">
-          <p>PROJECTS</p>
-          <i
-            class="fa-solid fa-circle-arrow-right"
-            style="color: var(--color-gray)"
-          ></i>
-        </a>
-      </section>
-      <section class="box_wrap">
-        <a href="/skill" class="skills_box" onclick="route()">
-          <p>SKILLS</p>
-          <i
-            class="fa-solid fa-circle-arrow-right"
-            style="color: var(--color-gray)"
-          ></i>
-        </a>
-        <a href="/contact" class="contact_box" onclick="route()">
-          <p>CONTACT ME</p>
-          <i
-            class="fa-solid fa-circle-arrow-right"
-            style="color: var(--color-gray); font-size: 1.5rem"
-          ></i>
-        </a>
-      </section>
-    </main>
+          <section id="project" class="projects_box">
+            <p>PROJECTS</p>
+            <i
+              class="fa-solid fa-circle-arrow-right"
+              style="color: var(--color-gray)"
+            ></i>
+          </section>
+          <section id="skill" class="skills_box">
+            <p>SKILLS</p>
+            <i
+              class="fa-solid fa-circle-arrow-right"
+              style="color: var(--color-gray)"
+            ></i>
+          </section>
+          <section id="contact" class="contact_box">
+            <p>CONTACT ME</p>
+            <i
+              class="fa-solid fa-circle-arrow-right"
+              style="color: var(--color-gray); font-size: 1.5rem"
+            ></i>
+          </section>
+        </main>
+      </div>
+    </div>
   </body>
 </html>

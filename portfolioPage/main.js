@@ -1,23 +1,23 @@
-const introBox = document.querySelector(".intro_box");
+const aboutBox = document.querySelector(".about_box");
 
-introBox.addEventListener("mouseenter", introBoxOver);
+aboutBox.addEventListener("mouseenter", aboutBoxOver);
 
-function introBoxOver() {
-  introBox.style.backgroundColor = "var(--color-orange)";
-  introBox.innerText = "ABOUT ME";
-  introBox.style.fontSize = "4.3rem";
+function aboutBoxOver() {
+  aboutBox.style.backgroundColor = "var(--color-orange)";
+  aboutBox.innerText = "ABOUT ME";
+  aboutBox.style.fontSize = "4.3rem";
 }
 
-introBox.addEventListener("mouseleave", () => {
-  introBox.style.backgroundColor = "var(--color-darkgray)";
-  introBox.style.fontSize = "1.5rem";
-  introBox.innerHTML = `
-  <section class="intro_box">
+aboutBox.addEventListener("mouseleave", () => {
+  aboutBox.style.backgroundColor = "var(--color-darkgray)";
+  aboutBox.style.fontSize = "1.5rem";
+  aboutBox.innerHTML = `
+  <div class="about_content">
     <p>안녕하세요!</p>
     <p>이주현입니다.😊</p>
     <p style="font-size: 0.8rem">"Front-End Developer"</p>
-  </section>
-  <i class="fa-solid fa-circle-arrow-right" style="color: var(--color-gray)"></i>
+  </div>
+  <i class="fa-solid fa-circle-arrow-right section_icon"></i>
   `;
 });
 
@@ -47,7 +47,7 @@ const skillBox = document.querySelector(".skills_box");
 
 function skillBoxOver() {
   skillBox.innerHTML = `
-  <div class="skills_icon_wrap>
+  <div class="skills_icon_wrap">
     <i class="fa-brands fa-html5"></i>
     <i class="fa-brands fa-css3-alt"></i>
     <i class="fa-brands fa-react"></i>
@@ -73,10 +73,12 @@ const contactBox = document.querySelector(".contact_box");
 
 function contactBoxOver() {
   contactBox.innerHTML = `
-  <i class="fa-solid fa-phone"></i>
-  <i class="fa-solid fa-at"></i>
-  <i class="fa-brands fa-github"></i>
-  <i class="fa-regular fa-clipboard"></i>
+  <div class="contact_icon_wrap">
+    <i class="fa-solid fa-phone"></i>
+    <i class="fa-solid fa-at"></i>
+    <i class="fa-brands fa-github"></i>
+    <i class="fa-regular fa-clipboard"></i>
+  </div>
   `;
 }
 
@@ -93,3 +95,37 @@ contactBox.addEventListener("mouseleave", () => {
   <i class="fa-solid fa-circle-arrow-right" style="color: var(--color-gray); font-size: 1.5rem"></i>
   `;
 });
+
+function onLine(event) {
+  // aboutBox.style.border = "1px solid var(--color-orange)";
+  console.log(event.target.dataset.name);
+  const sectionName = event.target.dataset.name;
+  sectionName.style.border = "1px solid var(--color-orange);";
+}
+
+const menu = document.querySelector(".menu_wrap");
+menu.addEventListener("click", (event) => {
+  const target = event.target.dataset.name;
+  scrollIntoView(target);
+  removeSectionActive();
+  addSectionActive(target);
+});
+
+function scrollIntoView(el) {
+  const element = document.getElementById(el);
+  console.log(element);
+  element.scrollIntoView({ behavior: "smooth", block: "center" });
+}
+
+function removeSectionActive() {
+  const main = document.querySelector(".main");
+  const child = Array.from(main.children);
+  child.map((list) => {
+    list.classList.remove("active");
+  });
+}
+
+function addSectionActive(el) {
+  const element = document.getElementById(el);
+  element.classList.add("active");
+}
