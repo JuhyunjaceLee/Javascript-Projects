@@ -1,0 +1,123 @@
+:root {
+  /* color */
+  --color-white: rgb(255, 255, 255);
+  --color-gray: rgb(124, 132, 136);
+  --color-darkgray: rgb(51, 54, 57);
+  --color-orange: rgb(255, 105, 0);
+  --color-black: rgb(0, 0, 0);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-color: var(--color-black);
+  color: var(--color-white);
+  padding: 15px 60px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+li {
+  list-style: none;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-black);
+  position: fixed;
+  width: 91%;
+  top: 0;
+  padding: 10px 0;
+}
+.title_wrap {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.face {
+  width: 60px;
+  height: 60px;
+  margin-right: 5px;
+}
+.face:hover {
+  transform: rotate(-45deg);
+}
+.title_name {
+  color: var(--color-orange);
+  font-size: 2.5rem;
+}
+.menu_wrap {
+  display: flex;
+}
+.menu_wrap li {
+  margin-right: 15px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--color-gray);
+  cursor: pointer;
+}
+.menu_wrap li:hover {
+  color: var(--color-orange);
+}
+.job_title {
+  font-size: 6rem;
+  text-align: center;
+  color: var(--color-gray);
+  margin-top: 40px;
+}
+.main {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  font-size: 1.5rem;
+  font-family: "IBM Plex Sans KR", sans-serif;
+  font-weight: 600;
+}
+.main section {
+  height: 200px;
+  margin: 5px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: var(--color-darkgray);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.main section.active {
+  border: 2px solid var(--color-orange);
+}
+.about_box,
+.contact_box {
+  grid-column-end: span 2;
+}
+.contact_box {
+  font-size: 2.5rem;
+}
+
+/* JS-CSS */
+.section_icon {
+  color: var(--color-gray);
+}
+.skills_icon_wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: auto;
+}
+.skills_icon_wrap i {
+  font-size: 4rem;
+}
+.contact_icon_wrap {
+  /* display: flex; */
+  /* justify-content: center; */
+  margin: auto;
+}
+.contact_icon_wrap i {
+  font-size: 5rem;
+  margin-right: 20px;
+}

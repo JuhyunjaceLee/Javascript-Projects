@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="./style.css" />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
       rel="stylesheet"
     />
     <script src="./main.js" defer></script>
@@ -17,56 +17,273 @@
     ></script>
   </head>
   <body>
-    <nav class="nav">
-      <div class="title_wrap" onclick="removeSectionActive()">
-        <img class="face" src="./img/face_logo.png" alt="face_logo" />
-        <h2 class="title_name">JUHYUN LEE</h2>
+    <nav>
+      <div class="nav-title">
+        <img src="./img/face_logo.png" alt="face_logo" />
+        <h2>JUHYUN LEE</h2>
       </div>
-      <ul class="menu_wrap">
-        <li data-name="about">About</li>
-        <li data-name="project">Projects</li>
-        <li data-name="skill">Skills</li>
-        <li data-name="contact">Contact</li>
+      <ul class="nav-list">
+        <li>Home</li>
+        <li>About</li>
+        <li>Projects</li>
+        <li>Skills</li>
+        <li>Contact</li>
       </ul>
     </nav>
-    <h1 class="job_title">FRONT-END DEVELOPER</h1>
-    <div class="main_wrap">
-      <div class="main_wrapper">
-        <main class="main">
-          <section id="about" class="about_box">
-            <div class="about_content">
-              <p>안녕하세요!</p>
-              <p>이주현입니다.😊</p>
-              <p style="font-size: 0.8rem">"Front-End Developer"</p>
+    <div class="main-content">
+      <section id="home" class="home">
+        <div class="section_container">
+          <h1>FRONT-END DEVELOPER</h1>
+          <main class="section_main home_main">
+            <div class="box about_box">
+              <div>
+                <p>안녕하세요!</p>
+                <p><span class="my-name">이주현</span>입니다.😊</p>
+                <p style="font-size: 0.8rem">"Front-End Developer"</p>
+              </div>
+              <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
-            <i
-              class="fa-solid fa-circle-arrow-right"
-              style="color: var(--color-gray)"
-            ></i>
-          </section>
-          <section id="project" class="projects_box">
-            <p>PROJECTS</p>
-            <i
-              class="fa-solid fa-circle-arrow-right"
-              style="color: var(--color-gray)"
-            ></i>
-          </section>
-          <section id="skill" class="skills_box">
-            <p>SKILLS</p>
-            <i
-              class="fa-solid fa-circle-arrow-right"
-              style="color: var(--color-gray)"
-            ></i>
-          </section>
-          <section id="contact" class="contact_box">
-            <p>CONTACT ME</p>
-            <i
-              class="fa-solid fa-circle-arrow-right"
-              style="color: var(--color-gray); font-size: 1.5rem"
-            ></i>
-          </section>
-        </main>
-      </div>
+            <div class="box project_box">
+              <p>PROJECTS</p>
+              <i class="fa-solid fa-circle-arrow-right"></i>
+            </div>
+            <div class="box skill_box">
+              <p>SKILLS</p>
+              <i class="fa-solid fa-circle-arrow-right"></i>
+            </div>
+            <div class="box contact_box">
+              <p>CONTACT ME</p>
+              <i class="fa-solid fa-circle-arrow-right"></i>
+            </div>
+          </main>
+        </div>
+      </section>
+      <section id="about" class="about">
+        <div class="section_container">
+          <h1>ABOUT ME</h1>
+          <div class="about-contents">
+            <img src="./img/avartar.jpg" alt="" />
+            <main class="about-main about-personal">
+              <h3>PERSONAL INFO</h3>
+              <div class="about-info personal-info">
+                <div class="info-box-Q">
+                  <p>Birthday</p>
+                  <p>City</p>
+                  <p>Phone Number</p>
+                  <p>Email</p>
+                </div>
+                <div class="info-box-A">
+                  <p>1991 - 07 - 12</p>
+                  <p>Goyang City, Gyeonggi-do</p>
+                  <p>+82 010 - 3876 - 3760</p>
+                  <p>heyjace777@gmail.com</p>
+                </div>
+              </div>
+            </main>
+          </div>
+          <div class="about-detail-contents">
+            <main class="about-main about-education">
+              <div class="timeline">
+                <h3>EDUCATION</h3>
+                <div class="container left-container">
+                  <div class="circle"></div>
+                  <div class="text-box">
+                    <h2>프론트엔드웹개발 양성 과정 수료</h2>
+                    <p>-HTML5, CSS, 자바스크립트, 제이쿼리, 리액트</p>
+                    <p>-넵플릭스 국비교육기관</p>
+                    <span class="left-container-arrow"></span>
+                  </div>
+                  <div class="left-container-year">
+                    <span>2022.02 - 2022.03</span>
+                  </div>
+                </div>
+                <div class="container right-container">
+                  <div class="circle"></div>
+                  <div class="text-box">
+                    <h2>자바스크립트 & Vue.js</h2>
+                    <p>-자바스크립트 및 Vue.js 프레임워크 이론 및 실습 교육</p>
+                    <p>-마포청년나루</p>
+                    <span class="right-container-arrow"></span>
+                  </div>
+                  <div class="right-container-year">
+                    <span>2022.05 - 2022.06</span>
+                  </div>
+                </div>
+                <div class="container left-container">
+                  <div class="circle"></div>
+                  <div class="text-box">
+                    <h2>자바스크립트 프로젝트 & 포트폴리오 제작과정</h2>
+                    <p>
+                      -클론코딩을 통하여 포트폴리오로 활용할 수 있는 프로젝트
+                      과정
+                    </p>
+                    <p>-마포청년나루</p>
+                    <span class="left-container-arrow"></span>
+                  </div>
+                  <div class="left-container-year">
+                    <span>2022.02 - 2022.03</span>
+                  </div>
+                </div>
+              </div>
+            </main>
+            <main class="about-main about-experience">
+              <div class="timeline experience-timeline">
+                <h3>EXPERIENCE</h3>
+                <div class="container left-container">
+                  <div class="circle"></div>
+                  <div class="text-box">
+                    <h2>주식회사 신영솔루션</h2>
+                    <p>서브PM(스마트공장 산출물 작성) 및 회계</p>
+                    <span class="left-container-arrow"></span>
+                  </div>
+                  <div class="left-container-year">
+                    <span>2020.10 - 2021.12</span>
+                  </div>
+                </div>
+                <div class="container right-container">
+                  <div class="circle"></div>
+                  <div class="text-box">
+                    <h2>유니클로</h2>
+                    <p>고객응대 및 매장관리</p>
+                    <span class="right-container-arrow"></span>
+                  </div>
+                  <div class="right-container-year">
+                    <span>2017.10 - 2018.05</span>
+                  </div>
+                </div>
+                <div class="container left-container">
+                  <div class="circle"></div>
+                  <div class="text-box">
+                    <h2>법무법인 원진</h2>
+                    <p>문서송부 및 관리, 회계 및 총무 담당</p>
+                    <span class="left-container-arrow"></span>
+                  </div>
+                  <div class="left-container-year">
+                    <span>2016.05 - 2017.06</span>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </section>
+      <section id="project" class="project">
+        <div class="section_container">
+          <h1>PROJECTS</h1>
+          <main class="section_main project_main">
+            <h3>My projects</h3>
+            <div class="project-btn-wrap">
+              <button class="project-btn">ALL</button>
+              <button class="project-btn">JS</button>
+              <button class="project-btn">REACT</button>
+            </div>
+          </main>
+          <main class="section_main project_main">
+            <div class="project_contents">
+              <div>
+                <a href="#">
+                  <img src="./img/thumbnail/closet_thumbnail.png" alt="" />
+                  <h4>What`s In Your Closet</h4>
+                  <p>바로가기 <span>CLICK!</span></p>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img
+                    src="./img/thumbnail/shoppingList_thumbnail.png"
+                    alt=""
+                  />
+                  <h4>Shopping List</h4>
+                  <p>바로가기 <span>CLICK!</span></p>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img
+                    src="./img/thumbnail/ploggingGame_thumbnail.png"
+                    alt=""
+                  />
+                  <h4>Plogging Game</h4>
+                  <p>바로가기 <span>CLICK!</span></p>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img src="./img/thumbnail/closet_thumbnail.png" alt="" />
+                  <h4>What`s In Your Closet</h4>
+                  <p>바로가기 <span>CLICK!</span></p>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img
+                    src="./img/thumbnail/shoppingList_thumbnail.png"
+                    alt=""
+                  />
+                  <h4>Shopping List</h4>
+                  <p>바로가기 <span>CLICK!</span></p>
+                </a>
+              </div>
+              <div>
+                <a href="#">
+                  <img
+                    src="./img/thumbnail/ploggingGame_thumbnail.png"
+                    alt=""
+                  />
+                  <h4>Plogging Game</h4>
+                  <p>바로가기 <span>CLICK!</span></p>
+                </a>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+      <section id="skill" class="skill">
+        <div class="section_container">
+          <h1>SKILLS</h1>
+          <main class="section_main project_main">
+            <div class="chart-container chart-container1">
+              <div class="chart">
+                <div class="donut-chart chart1">
+                  <div class="chart-circle"><p>90%</p></div>
+                </div>
+                <p>HTML5</p>
+              </div>
+              <div class="chart">
+                <div class="donut-chart chart2">
+                  <div class="chart-circle"><p>90%</p></div>
+                </div>
+                <p>CSS3</p>
+              </div>
+              <div class="chart">
+                <div class="donut-chart chart3">
+                  <div class="chart-circle"><p>80%</p></div>
+                </div>
+                <p>JAVASCRIPT</p>
+              </div>
+            </div>
+            <div class="chart-container chart-container2">
+              <div class="chart">
+                <div class="donut-chart chart4">
+                  <div class="chart-circle"><p>70%</p></div>
+                </div>
+                <p>VUE.JS</p>
+              </div>
+              <div class="chart">
+                <div class="donut-chart chart5">
+                  <div class="chart-circle"><p>70%</p></div>
+                </div>
+                <p>REACT</p>
+              </div>
+            </div>
+          </main>
+        </div>
+      </section>
+      <section id="contact" class="contact">
+        <div class="section_container">
+          <h1>CONTACT</h1>
+        </div>
+      </section>
     </div>
   </body>
 </html>
