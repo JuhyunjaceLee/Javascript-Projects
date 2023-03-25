@@ -19,23 +19,23 @@
   <body>
     <nav>
       <div class="nav-title">
-        <img src="./img/face_logo.png" alt="face_logo" />
-        <h2>JUHYUN LEE</h2>
+        <img src="./img/face_logo.png" alt="face_logo" data-link="home" />
+        <h2 data-link="home">JUHYUN LEE</h2>
       </div>
       <ul class="nav-list">
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Skills</li>
-        <li>Contact</li>
+        <li data-link="home">Home</li>
+        <li data-link="about">About</li>
+        <li data-link="project">Projects</li>
+        <li data-link="skill">Skills</li>
+        <li data-link="contact">Contact</li>
       </ul>
     </nav>
     <div class="main-content">
-      <section id="home" class="home">
+      <section id="home" class="home page-section active">
         <div class="section_container">
           <h1>FRONT-END DEVELOPER</h1>
           <main class="section_main home_main">
-            <div class="box about_box">
+            <div id="about" class="box about_box" data-page="aboutPage">
               <div>
                 <p>안녕하세요!</p>
                 <p><span class="my-name">이주현</span>입니다.😊</p>
@@ -43,22 +43,22 @@
               </div>
               <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
-            <div class="box project_box">
+            <div id="project" class="box project_box" data-page="projectPage">
               <p>PROJECTS</p>
               <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
-            <div class="box skill_box">
+            <div id="skill" class="box skill_box" data-page="skillPage">
               <p>SKILLS</p>
               <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
-            <div class="box contact_box">
+            <div id="contact" class="box contact_box" data-page="contactPage">
               <p>CONTACT ME</p>
               <i class="fa-solid fa-circle-arrow-right"></i>
             </div>
           </main>
         </div>
       </section>
-      <section id="about" class="about">
+      <section id="aboutPage" class="about page-section">
         <div class="section_container">
           <h1>ABOUT ME</h1>
           <div class="about-contents">
@@ -167,7 +167,7 @@
           </div>
         </div>
       </section>
-      <section id="project" class="project">
+      <section id="projectPage" class="project page-section">
         <div class="section_container">
           <h1>PROJECTS</h1>
           <main class="section_main project_main">
@@ -181,14 +181,18 @@
           <main class="section_main project_main">
             <div class="project_contents">
               <div>
-                <a href="#">
+                <a
+                  href="https://github.com/JuhyunjaceLee/Javascript-Projects/tree/main/what%60sInMyCloset"
+                >
                   <img src="./img/thumbnail/closet_thumbnail.png" alt="" />
-                  <h4>What`s In Your Closet</h4>
+                  <h4>What`s In My Closet</h4>
                   <p>바로가기 <span>CLICK!</span></p>
                 </a>
               </div>
               <div>
-                <a href="#">
+                <a
+                  href="https://github.com/JuhyunjaceLee/Javascript-Projects/tree/main/shoppingList"
+                >
                   <img
                     src="./img/thumbnail/shoppingList_thumbnail.png"
                     alt=""
@@ -198,7 +202,9 @@
                 </a>
               </div>
               <div>
-                <a href="#">
+                <a
+                  href="https://github.com/JuhyunjaceLee/Javascript-Projects/tree/main/ploggingGame"
+                >
                   <img
                     src="./img/thumbnail/ploggingGame_thumbnail.png"
                     alt=""
@@ -238,7 +244,7 @@
           </main>
         </div>
       </section>
-      <section id="skill" class="skill">
+      <section id="skillPage" class="skill page-section">
         <div class="section_container">
           <h1>SKILLS</h1>
           <main class="section_main project_main">
@@ -279,9 +285,39 @@
           </main>
         </div>
       </section>
-      <section id="contact" class="contact">
+      <section id="contactPage" class="contact page-section">
         <div class="section_container">
           <h1>CONTACT</h1>
+          <main class="section_main contact_main">
+            <div class="contact_container">
+              <div>
+                <i class="fa-solid fa-phone"></i>
+                <h4>PHONE NUMBER</h4>
+                <p>+82 010 . 3876 . 3760</p>
+              </div>
+              <div>
+                <i class="fa-solid fa-envelope"></i>
+                <h4>EMAIL ADRESS</h4>
+                <p>heyjace777@gmail.com</p>
+              </div>
+              <div>
+                <a href="">
+                  <i class="fa-brands fa-github"></i>
+                  <h4>GITHUB ADRESS</h4>
+                  <p>https://github.com/JuhyunjaceLee</p>
+                </a>
+              </div>
+              <div>
+                <a
+                  href="https://desert-edam-bea.notion.site/Projects-fa915cc8c4ad466081fee41a0dbbd18c"
+                >
+                  <i class="fa-solid fa-file-pen"></i>
+                  <h4>NOTION ADRESS</h4>
+                  <p>Linked</p>
+                </a>
+              </div>
+            </div>
+          </main>
         </div>
       </section>
     </div>
