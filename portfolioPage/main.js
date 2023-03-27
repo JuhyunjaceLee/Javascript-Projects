@@ -4,6 +4,10 @@ const homeMain = document.querySelector(".home_main");
 const mainBox = document.querySelectorAll(".box");
 const mainBoxLength = mainBox.length;
 const myName = document.querySelector(".my-name");
+const projectFilterBtnWrap = document.querySelector(".project-btn-wrap");
+const projectBtn = document.querySelectorAll(".project-btn");
+const projectBtnLength = projectBtn.length;
+const projectItem = document.querySelectorAll(".project_item");
 
 navList.addEventListener("click", (e) => {
   const target = e.target.dataset.link;
@@ -14,7 +18,6 @@ navList.addEventListener("click", (e) => {
 
 homeMain.addEventListener("click", (e) => {
   const target = e.target.dataset.page;
-  console.log(e.target.dataset.page);
   scrollIntoView(target);
 });
 
@@ -125,11 +128,26 @@ mainBox[3].addEventListener("mouseleave", () => {
 });
 for (let i = 0; i < mainBoxLength; i++) {
   const box = mainBox[i];
-  // box.addEventListener("click", function () {
-  //   console.log(this);
-  // });
   box.addEventListener("click", (e) => {
     const target = e.target;
     target.classList.add("active");
   });
 }
+
+projectFilterBtnWrap.addEventListener("click", (e) => {
+  const target = e.target;
+  for (i = 0; i < projectBtnLength; i++) {
+    projectBtn[i].classList.remove("active");
+    target.classList.add("active");
+  }
+  const filterValue = e.target.getAttribute("data-filter");
+  projectItem.forEach((item) => {
+    if (item.classList.contains(filterValue) || filterValue === "all") {
+      item.classList.remove("hide");
+      item.classList.add("show");
+    } else {
+      item.classList.remove("show");
+      item.classList.add("hide");
+    }
+  });
+});

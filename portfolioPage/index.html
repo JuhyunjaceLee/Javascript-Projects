@@ -62,7 +62,7 @@
         <div class="section_container">
           <h1>ABOUT ME</h1>
           <div class="about-contents">
-            <img src="./img/avartar.jpg" alt="" />
+            <img src="./img/avartar.jpg" alt="avartar" />
             <main class="about-main about-personal">
               <h3>PERSONAL INFO</h3>
               <div class="about-info personal-info">
@@ -173,71 +173,70 @@
           <main class="section_main project_main">
             <h3>My projects</h3>
             <div class="project-btn-wrap">
-              <button class="project-btn">ALL</button>
-              <button class="project-btn">JS</button>
-              <button class="project-btn">REACT</button>
+              <button class="project-btn active" data-filter="all">ALL</button>
+              <button class="project-btn" data-filter="js">JS</button>
+              <button class="project-btn" data-filter="vue">VUE</button>
+              <button class="project-btn" data-filter="react">REACT</button>
             </div>
           </main>
           <main class="section_main project_main">
             <div class="project_contents">
-              <div>
+              <div class="project_item js">
                 <a
                   href="https://github.com/JuhyunjaceLee/Javascript-Projects/tree/main/what%60sInMyCloset"
+                  target="_blank"
                 >
-                  <img src="./img/thumbnail/closet_thumbnail.png" alt="" />
+                  <img
+                    src="./img/thumbnail/closet_thumbnail.png"
+                    alt="closet_thumbnail"
+                  />
                   <h4>What`s In My Closet</h4>
                   <p>바로가기 <span>CLICK!</span></p>
                 </a>
               </div>
-              <div>
+              <div class="project_item js">
                 <a
                   href="https://github.com/JuhyunjaceLee/Javascript-Projects/tree/main/shoppingList"
+                  target="_blank"
                 >
                   <img
                     src="./img/thumbnail/shoppingList_thumbnail.png"
-                    alt=""
+                    alt="shoppingList_thumbnail"
                   />
                   <h4>Shopping List</h4>
                   <p>바로가기 <span>CLICK!</span></p>
                 </a>
               </div>
-              <div>
+              <div class="project_item js">
                 <a
                   href="https://github.com/JuhyunjaceLee/Javascript-Projects/tree/main/ploggingGame"
+                  target="_blank"
                 >
                   <img
                     src="./img/thumbnail/ploggingGame_thumbnail.png"
-                    alt=""
+                    alt="ploggingGame_thumbnail"
                   />
                   <h4>Plogging Game</h4>
                   <p>바로가기 <span>CLICK!</span></p>
                 </a>
               </div>
-              <div>
-                <a href="#">
-                  <img src="./img/thumbnail/closet_thumbnail.png" alt="" />
-                  <h4>What`s In Your Closet</h4>
+              <div class="project_item vue">
+                <a
+                  href="https://github.com/JuhyunjaceLee/mybox/tree/master/mybox_vue"
+                  target="_blank"
+                >
+                  <img
+                    src="./img/thumbnail/myBox_thumbnail.png"
+                    alt="myBox_thumbnail"
+                  />
+                  <h4>My Box</h4>
                   <p>바로가기 <span>CLICK!</span></p>
                 </a>
               </div>
-              <div>
+              <div class="project_item react">
                 <a href="#">
-                  <img
-                    src="./img/thumbnail/shoppingList_thumbnail.png"
-                    alt=""
-                  />
-                  <h4>Shopping List</h4>
-                  <p>바로가기 <span>CLICK!</span></p>
-                </a>
-              </div>
-              <div>
-                <a href="#">
-                  <img
-                    src="./img/thumbnail/ploggingGame_thumbnail.png"
-                    alt=""
-                  />
-                  <h4>Plogging Game</h4>
-                  <p>바로가기 <span>CLICK!</span></p>
+                  <img src="./img/thumbnail/react_img.png" alt="react_img" />
+                  <h4>준비중입니다.</h4>
                 </a>
               </div>
             </div>
@@ -277,7 +276,7 @@
               </div>
               <div class="chart">
                 <div class="donut-chart chart5">
-                  <div class="chart-circle"><p>70%</p></div>
+                  <div class="chart-circle"><p>50%</p></div>
                 </div>
                 <p>REACT</p>
               </div>
@@ -301,7 +300,7 @@
                 <p>heyjace777@gmail.com</p>
               </div>
               <div>
-                <a href="">
+                <a href="https://github.com/JuhyunjaceLee" target="_blank">
                   <i class="fa-brands fa-github"></i>
                   <h4>GITHUB ADRESS</h4>
                   <p>https://github.com/JuhyunjaceLee</p>
@@ -310,6 +309,7 @@
               <div>
                 <a
                   href="https://desert-edam-bea.notion.site/Projects-fa915cc8c4ad466081fee41a0dbbd18c"
+                  target="_blank"
                 >
                   <i class="fa-solid fa-file-pen"></i>
                   <h4>NOTION ADRESS</h4>
