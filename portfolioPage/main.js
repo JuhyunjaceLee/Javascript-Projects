@@ -16,19 +16,20 @@ navList.addEventListener("click", (e) => {
   addSectionActive(target);
 });
 
-homeMain.addEventListener("click", (e) => {
-  const target = e.target.dataset.page;
+function homeMainBoxClickHandler(e) {
+  let elem = e.target;
+  let target = elem.dataset.page;
+  while (!elem.classList.contains("box")) {
+    elem = elem.parentNode;
+    if (elem.nodeName === "BODY") {
+      elem = null;
+      return;
+    }
+  }
   scrollIntoView(target);
-});
+}
 
-function scrollIntoView(el) {
-  const element = document.getElementById(el);
-  element.scrollIntoView({ behavior: "smooth", block: "start" });
-}
-function scrollIntoViewEnd(el) {
-  const element = document.getElementById(el);
-  element.scrollIntoView({ behavior: "smooth", block: "end" });
-}
+homeMain.addEventListener("click", homeMainBoxClickHandler);
 
 function addSectionActive(el) {
   const element = document.getElementById(el);
@@ -76,12 +77,13 @@ mainBox[0].addEventListener("mouseleave", () => {
   mainBox[0].style.fontSize = "1.5rem";
 });
 mainBox[1].addEventListener("mouseenter", () => {
-  mainBox[1].innerHTML = `
+  const htmlStr = `
   <div class="project-subtitle">
     <p>Let's See</p> 
     <p>My All Projects</p>
   </div>
   `;
+  mainBox[1].innerHTML = htmlStr;
 });
 mainBox[1].addEventListener("mouseleave", () => {
   mainBox[1].innerHTML = `
@@ -128,10 +130,20 @@ mainBox[3].addEventListener("mouseleave", () => {
 });
 for (let i = 0; i < mainBoxLength; i++) {
   const box = mainBox[i];
+  box.classList.remove(".active");
   box.addEventListener("click", (e) => {
     const target = e.target;
     target.classList.add("active");
   });
+}
+
+function scrollIntoView(el) {
+  const element = document.getElementById(el);
+  element.scrollIntoView({ behavior: "smooth", block: "start" });
+}
+function scrollIntoViewEnd(el) {
+  const element = document.getElementById(el);
+  element.scrollIntoView({ behavior: "smooth", block: "end" });
 }
 
 projectFilterBtnWrap.addEventListener("click", (e) => {
