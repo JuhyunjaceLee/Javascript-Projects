@@ -8,6 +8,7 @@ const projectFilterBtnWrap = document.querySelector(".project-btn-wrap");
 const projectBtn = document.querySelectorAll(".project-btn");
 const projectBtnLength = projectBtn.length;
 const projectItem = document.querySelectorAll(".project_item");
+const goToTopBtn = document.querySelector(".go-to-top-btn");
 
 navList.addEventListener("click", (e) => {
   const target = e.target.dataset.link;
@@ -19,6 +20,7 @@ navList.addEventListener("click", (e) => {
 function homeMainBoxClickHandler(e) {
   let elem = e.target;
   let target = elem.dataset.page;
+  console.log(target);
   while (!elem.classList.contains("box")) {
     elem = elem.parentNode;
     if (elem.nodeName === "BODY") {
@@ -82,6 +84,7 @@ mainBox[1].addEventListener("mouseenter", () => {
     <p>Let's See</p> 
     <p>My All Projects</p>
   </div>
+  <div class="project-cover" data-page="projectPage"></div>
   `;
   mainBox[1].innerHTML = htmlStr;
 });
@@ -104,6 +107,7 @@ mainBox[2].addEventListener("mouseenter", () => {
       <i class="fa-brands fa-vuejs"></i>
     </div>
   </div>
+  <div class="skill-cover" data-page="skillPage"></div>
 `;
 });
 mainBox[2].addEventListener("mouseleave", () => {
@@ -120,6 +124,8 @@ mainBox[3].addEventListener("mouseenter", () => {
     <i class="fa-brands fa-github"></i>
     <i class="fa-regular fa-clipboard"></i>
   </div>
+  <div class="contact-cover" data-page="contactPage"></div>
+
 `;
 });
 mainBox[3].addEventListener("mouseleave", () => {
@@ -150,8 +156,8 @@ projectFilterBtnWrap.addEventListener("click", (e) => {
   const target = e.target;
   for (i = 0; i < projectBtnLength; i++) {
     projectBtn[i].classList.remove("active");
-    target.classList.add("active");
   }
+  target.classList.add("active");
   const filterValue = e.target.getAttribute("data-filter");
   projectItem.forEach((item) => {
     if (item.classList.contains(filterValue) || filterValue === "all") {
@@ -161,5 +167,12 @@ projectFilterBtnWrap.addEventListener("click", (e) => {
       item.classList.remove("show");
       item.classList.add("hide");
     }
+  });
+});
+
+goToTopBtn.addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth",
   });
 });

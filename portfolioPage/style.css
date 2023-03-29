@@ -127,15 +127,29 @@ nav .nav-list li:hover {
 }
 .project_box {
   grid-area: project;
+  position: relative;
 }
 .skill_box {
   grid-area: skill;
+  position: relative;
 }
 .contact_box {
   grid-area: contact;
+  position: relative;
 }
 .project-subtitle p {
   font-size: 1.2rem;
+}
+.project-cover,
+.skill-cover,
+.contact-cover {
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-orange);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
 }
 .skills_icon_wrap,
 .contact_icon_wrap {
@@ -301,13 +315,13 @@ nav .nav-list li:hover {
 .left-container-year {
   color: var(--color-white);
   position: absolute;
-  right: -50%;
+  right: -75%;
   top: 30px;
 }
 .right-container-year {
   color: var(--color-white);
   position: absolute;
-  left: -50%;
+  left: -75%;
   top: 30px;
 }
 
@@ -480,7 +494,16 @@ nav .nav-list li:hover {
 .contact_container div i {
   font-size: 3rem;
 }
-
+.go-to-top-btn {
+  font-size: 2rem;
+  position: fixed;
+  bottom: 30px;
+  right: 50px;
+  cursor: pointer;
+}
+.go-to-top-btn:hover {
+  color: var(--color-orange);
+}
 @media (max-width: 1199px) {
   .about-main .timeline .container p {
     display: none;
