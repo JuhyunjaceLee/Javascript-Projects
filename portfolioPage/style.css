@@ -115,6 +115,7 @@ nav .nav-list li:hover {
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
+  position: relative;
 }
 .box.active {
   border: 1px solid var(--color-orange);
@@ -125,41 +126,48 @@ nav .nav-list li:hover {
 .about_box {
   grid-area: about;
 }
+.box_hover {
+  position: absolute;
+  opacity: 0;
+}
+.about_box .about_box_hover p {
+  font-size: 5rem;
+}
+.box:hover {
+  background-color: var(--color-orange);
+}
+.box:hover i {
+  color: var(--color-white);
+}
+.box:hover .box_basic {
+  opacity: 0;
+}
+.box:hover .box_hover {
+  opacity: 1;
+}
 .project_box {
   grid-area: project;
-  position: relative;
 }
 .skill_box {
   grid-area: skill;
-  position: relative;
+}
+.skill_box_hover {
+  font-size: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.contact_box_hover {
+  font-size: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 50px;
 }
 .contact_box {
   grid-area: contact;
-  position: relative;
 }
 .project-subtitle p {
   font-size: 1.2rem;
-}
-.project-cover,
-.skill-cover,
-.contact-cover {
-  width: 100%;
-  height: 100%;
-  background-color: var(--color-orange);
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0.1;
-}
-.skills_icon_wrap,
-.contact_icon_wrap {
-  display: flex;
-  justify-content: center;
-}
-.skills_icon_wrap i,
-.contact_icon_wrap i {
-  font-size: 2rem;
-  margin-right: 30px;
 }
 /* about */
 .about .section_container .about-contents img {
