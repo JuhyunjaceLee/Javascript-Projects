@@ -10,12 +10,12 @@ const projectBtnLength = projectBtn.length;
 const projectItem = document.querySelectorAll(".project_item");
 const goToTopBtn = document.querySelector(".go-to-top-btn");
 
-navList.addEventListener("click", (e) => {
-  const target = e.target.dataset.link;
-  scrollIntoViewEnd(target);
-  removeSectionActive();
-  addSectionActive(target);
-});
+// navList.addEventListener("click", (e) => {
+//   const target = e.target.dataset.link;
+//   scrollIntoViewEnd(target);
+//   removeSectionActive();
+//   addSectionActive(target);
+// });
 
 function homeMainBoxClickHandler(e) {
   let elem = e.target;
