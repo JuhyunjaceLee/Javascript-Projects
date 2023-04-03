@@ -122,16 +122,21 @@ nav .nav-list li:hover {
 }
 .box i {
   color: var(--color-gray);
+  /* pointer-events: none; */
 }
 .about_box {
   grid-area: about;
 }
+.about_box .about_box_hover p {
+  font-size: 5rem;
+}
+/* .box_basic {
+  pointer-events: none;
+} */
 .box_hover {
   position: absolute;
   opacity: 0;
-}
-.about_box .about_box_hover p {
-  font-size: 5rem;
+  /* pointer-events: none; */
 }
 .box:hover {
   background-color: var(--color-orange);
