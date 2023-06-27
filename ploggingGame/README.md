@@ -3,7 +3,7 @@
 ## Thumbnail
 <img src="https://user-images.githubusercontent.com/94448281/224231720-a45adf5c-78c9-4cc9-a706-62da138c0d45.png" width="500"/>
 
-## 프로젝트 URL - 프로젝트 바로가기<a href="https://luminous-gaufre-2e946f.netlify.app/">CLICK</a>
+## 프로젝트 URL - 프로젝트 바로가기<a href="https://save-turtles-game.netlify.app">CLICK</a>
 
 ## 프로젝트 MEMO URL - <a href="https://desert-edam-bea.notion.site/Plogging-Game-9202f2ac1a8544f5b1d2447490cda5f0">CLICK</a>
 
