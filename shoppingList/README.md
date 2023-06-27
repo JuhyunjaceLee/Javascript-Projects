@@ -3,7 +3,7 @@
 ## Thumbnail
 <img src="https://user-images.githubusercontent.com/94448281/222886493-ea546db7-9b85-4e5f-b72b-f812b14bb2c1.png" width="500" />
 
-## 프로젝트 URL - 프로젝트 바로가기<a href="https://aquamarine-sopapillas-2cdcaa.netlify.app/">CLICK</a>
+## 프로젝트 URL - 프로젝트 바로가기<a href="https://to-buy-lists.netlify.app">CLICK</a>
 
 ## 프로젝트 MEMO URL - <a href="https://desert-edam-bea.notion.site/Shopping-List-498216a296dd4781a04a60c22574613a">CLICK</a>
 
