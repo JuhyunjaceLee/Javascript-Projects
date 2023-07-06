@@ -1,7 +1,7 @@
 # What`s In My Closet
 
 ## Thumbnail
-<img src="https://user-images.githubusercontent.com/94448281/222416718-5480f494-2c5b-4ce1-8f89-8c15884e9af3.png" width="500"/>
+<img src="https://github.com/JuhyunjaceLee/Javascript-Projects/assets/94448281/6c65d5d3-6030-4e8c-853e-64fdcdbe2ea0" width="500"/>
 
 ## 프로젝트 URL - 프로젝트 바로가기<a href="https://whats-in-my-closet.netlify.app">CLICK</a>
 
@@ -24,6 +24,7 @@
 
 * ### 활용한 Javascript 문법
   - fetch / .then( )
+  - dataset
   - 배열 메소드 filter / map
   - forEach
   - if 문
@@ -36,6 +37,10 @@
   - 위의 아이콘 클릭 시, 아래 이미지가 필러링되어 조건에 맞는 이미지만 불러온다.
   - 이미지 클릭 시, 상의는 상의div, 하의는 하의 div, 신발은 신발div로 한번 더 불러와진다.
   - reset버튼 클릭 시, 자식 node가 삭제되면서, 아무것도 없던 처음 상태로 돌아간다.
+
+## 문제와 해결방법
+* ### <a href="https://desert-edam-bea.notion.site/img-e18fbae20e7545a0889af1f074b114bc?pvs=4">함수로 img 불러오기</a>
+* ### <a href="https://desert-edam-bea.notion.site/b85ffae75d5347cf82f3459a3df3ddd0?pvs=4">배열요소의 참조</a>
 
 ## 개선할 점
 * 코드를 복기하면서 반복되는 부분이 있는지, 있다면 어떻게 합칠 수 있을 지 고민해봐야한다.
