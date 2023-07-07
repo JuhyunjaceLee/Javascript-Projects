@@ -1,11 +1,11 @@
 # Shopping List
 
 ## Thumbnail
-<img src="https://user-images.githubusercontent.com/94448281/222886493-ea546db7-9b85-4e5f-b72b-f812b14bb2c1.png" width="500" />
+<img src="https://github.com/JuhyunjaceLee/Javascript-Projects/assets/94448281/2bb43abe-f20c-44f4-90fe-3737edf7e073" width="500" />
 
 ## 프로젝트 URL - 프로젝트 바로가기<a href="https://to-buy-lists.netlify.app">CLICK</a>
 
-## 프로젝트 MEMO URL - <a href="https://desert-edam-bea.notion.site/Shopping-List-498216a296dd4781a04a60c22574613a">CLICK</a>
+## 프로젝트 DESCRIPTION URL - <a href="https://desert-edam-bea.notion.site/Shopping-List-498216a296dd4781a04a60c22574613a">CLICK</a>
 
 ## 제작기간
 2023년 03월 03일 - 2023년 03월 04일
@@ -38,6 +38,9 @@
   - checkbox클릭하면 빗금이 그어진다.
   - 휴지통을 클릭하면 삭제된다.
   - 웹페이지를 종료한 후, 다시 열어도 localStorage에 저장되어 종료 직전 상태 그대로 보여진다.
+
+## 문제와 해결방법
+* ### <a href="https://desert-edam-bea.notion.site/localStorage-19e18d0b929647b4857f66b8e1000cfd?pvs=4">localStorage</a>
 
 ## 개선할 점
 * 조금 더 간결하게 짤 수 있는지 고민해본다.
