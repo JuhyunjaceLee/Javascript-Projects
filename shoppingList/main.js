@@ -12,6 +12,14 @@ const save = () => {
   localStorage.setItem("tobuys", JSON.stringify(tobuys));
 };
 
+const createLocalList = (localtext) => {
+  const tobuy = {
+    id: tobuys.length + 1,
+    text: localtext,
+  };
+  tobuys.push(tobuy);
+};
+
 function addList() {
   const inputTextValue = inputText.value;
   if (inputTextValue === "") {
@@ -40,7 +48,7 @@ function createList(localtext) {
   const checkBox = document.createElement("input");
   checkBox.setAttribute("class", "checkbox");
   checkBox.setAttribute("type", "checkbox");
-  checkBox.addEventListener("change", () => {
+  checkBox.addEventListener("change", (e) => {
     if (checkBox.checked) {
       item.style.textDecoration = "line-through";
       item.style.textDecorationThickness = "2px";
@@ -53,6 +61,7 @@ function createList(localtext) {
   const delBtn = document.createElement("button");
   delBtn.setAttribute("class", "del-btn");
   delBtn.innerHTML = '<i class="fa-solid fa-trash-can"></i>';
+
   delBtn.addEventListener("click", () => {
     tobuys = tobuys.filter((tobuy) => tobuy.id !== parseInt(list.id));
     ul.removeChild(list);
@@ -68,14 +77,10 @@ function createList(localtext) {
   const newList = ul.appendChild(list);
   newList.scrollIntoView();
 
-  const tobuy = {
-    id: tobuys.length + 1,
-    text: localtext,
-  };
-  tobuys.push(tobuy);
+  createLocalList(localtext);
   counter();
-
   save();
+
   list.id = tobuys.length;
   return list;
 }
@@ -83,6 +88,7 @@ function createList(localtext) {
 function counter() {
   count.textContent = tobuys.length;
 }
+
 function load() {
   const loadLists = JSON.parse(localStorage.getItem("tobuys"));
   if (loadLists) {
