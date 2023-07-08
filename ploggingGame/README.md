@@ -1,7 +1,7 @@
 # Plogging Game
 
 ## Thumbnail
-<img src="https://user-images.githubusercontent.com/94448281/224231720-a45adf5c-78c9-4cc9-a706-62da138c0d45.png" width="500"/>
+<img src="https://github.com/JuhyunjaceLee/Javascript-Projects/assets/94448281/45631a5e-0e08-48ea-8079-f80a78b82bce" width="500"/>
 
 ## 프로젝트 URL - 프로젝트 바로가기<a href="https://save-turtles-game.netlify.app">CLICK</a>
 
@@ -38,6 +38,9 @@
   - 거북이를 클릭하면 게임이 lose 상태로 즉시 게임이 종료된다.
   - stop 버튼을 클릭하거나, 제한시간 내에 게임을 끝내지 못해도 게임이 종료된다.
   - popup의 replay버튼을 누르면 게임이 재시작된다.
+ 
+## 문제와 해결방법
+* ### <a href=""></a>
 
 ## 개선할 점
 * 현재 짜여진 코드는 함수의 연속이다. 이를 좀 더 그룹화 하는 방법이 있는지 고민해본다.
