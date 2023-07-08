@@ -33,7 +33,7 @@ function onFieldClick(event) {
   if (target.matches(".trash")) {
     target.remove();
     score++;
-    updateScroe();
+    updateScore();
     if (score === TRASH_COUNT) {
       finishGame(win);
     }
@@ -75,7 +75,7 @@ function playButton(txt) {
   gamePlayBtn.style.visibility = `${txt}`;
 }
 
-function updateScroe() {
+function updateScore() {
   gameScore.innerText = TRASH_COUNT - score;
 }
 popUpReplayBtn.addEventListener("click", () => {
