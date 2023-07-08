@@ -1,7 +1,7 @@
 # Plogging Game
 
 ## Thumbnail
-<img src="https://github.com/JuhyunjaceLee/Javascript-Projects/assets/94448281/45631a5e-0e08-48ea-8079-f80a78b82bce" width="500"/>
+<img src="https://github.com/JuhyunjaceLee/Javascript-Projects/assets/94448281/45631a5e-0e08-48ea-8079-f80a78b82bce" width="700"/>
 
 ## 프로젝트 URL - 프로젝트 바로가기<a href="https://save-turtles-game.netlify.app">CLICK</a>
 
@@ -40,7 +40,8 @@
   - popup의 replay버튼을 누르면 게임이 재시작된다.
  
 ## 문제와 해결방법
-* ### <a href=""></a>
+* ### <a href="https://desert-edam-bea.notion.site/8c1bfe8a808d410ebdb5e14484805224?pvs=4">필드 밖으로 생성되는 이미지</a>
+* ### <a href="https://desert-edam-bea.notion.site/Timer-0e893518030a46d0a34cf2507715cde2?pvs=4">타이머 구현하기</a>
 
 ## 개선할 점
 * 현재 짜여진 코드는 함수의 연속이다. 이를 좀 더 그룹화 하는 방법이 있는지 고민해본다.
