@@ -41,6 +41,7 @@
 
 ## 문제와 해결방법
 * ### <a href="https://desert-edam-bea.notion.site/localStorage-19e18d0b929647b4857f66b8e1000cfd?pvs=4">localStorage</a>
+* ### <a href="https://desert-edam-bea.notion.site/83c249f3a26c4d4ab8797e986761bf16?pvs=4">filter 메소드를 이용한 list 삭제</a>
 
 ## 개선할 점
 * 조금 더 간결하게 짤 수 있는지 고민해본다.
